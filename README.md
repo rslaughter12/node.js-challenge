@@ -1,8 +1,8 @@
-# My Current Project
+# README File Generator 
 
 ## Description
 
-No Discription
+This project is designed to automatically create a user's README.md file for them based on the information that they have provided in their terminal. Their answers are then populated into a proper readme format as well as providing default answers if the user has not been able to provide any information for a quesiton. The README.md file for this project was created in my terminal. 
 
 ## Table of Contents
 
@@ -22,5 +22,5 @@ This project is licensed under the Apache License 2.0 license.
 
 If you have any questions, please feel free to contact me:
 
-- GitHub: No GitHub Username Provided
-- Email: User has not provided their email
+- GitHub: rslaughter12
+- Email: rslaughter12@gmail.com
