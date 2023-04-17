@@ -1,7 +1,12 @@
+//  This is calling to two skills from node that is needed for this project. 
+// Inquirer is what allows us to ask the questions and recieve answers in the user's terminal when the code is called.
+// FS is what is used in order to generate the README.md file and is then populated using the readmetext function. 
  const inquirer =  require('inquirer');
  const fs = require('fs');
 
- inquirer
+ inquirer 
+//  this function below is using the inquirer node module to prompt the questions below.
+// the answers that the user puts in their terminal here is what is then used to populate their readme file. 
  .prompt([
     {
         type: 'input',
@@ -41,6 +46,10 @@
         default: 'User has not provided their email',
     },
  ])
+//  this function here is saying that when the user has completed their answers for the prompts above
+// that then it is going to take those answers and create and popualate the readme file.
+// if that is true the user will be met with success! in their terminal
+// if there was an error the user will be presented that in their terminal.
  .then((answers) => {
     fs.writeFile("README.md", readmetxt(answers), (err) => {
         if(err) {
@@ -49,7 +58,9 @@
         console.log('success!');
     });
  });
-
+// This is the function that is being called above. 
+// This function returns the standard readme format that is created below
+// But it then fills in the blanks using the changing answers that the user has entered into their terminal. 
  function readmetxt(answers) {
     return `# ${answers.name}
 
@@ -78,4 +89,4 @@ If you have any questions, please feel free to contact me:
 - GitHub: ${answers.username}
 - Email: ${answers.email}
 `;
-}
+ }
