@@ -1,5 +1,3 @@
- // TODO: Include packages needed for this application
- 
  const inquirer =  require('inquirer');
  const fs = require('fs');
 
@@ -31,4 +29,12 @@
         name: 'email',
         message: 'What is your email?',
     },
- ]);
+ ])
+ .then((answers) => {
+    fs.writeFile("README.md", readmetxt(answers), (err) => {
+        if(err) {
+            return console.log(err);
+        }
+        console.log('success!');
+    });
+ });
